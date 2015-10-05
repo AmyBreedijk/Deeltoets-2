@@ -1,0 +1,188 @@
+* {
+	box-sizing: border-box; 
+}
+
+@media screen and (min-width: 40em) {
+	main {
+		float: left;
+		width: 60%;
+	}
+	body > section {
+		float: right;
+		width: 40%;
+	}
+	body > aside {
+		float: right;
+	}
+	body > footer {
+		clear: both;
+	}
+}
+
+@media (min-width: 70em) {
+	main {
+		float: left;
+		width: 60%;
+	}
+	body > section {
+		float: right;
+		width: 20%;
+	}
+	body > aside {
+		float: right;
+		width: 20%;
+	}
+	body > footer {
+		display: flex;
+		flex-direction: column;
+	}
+	main p {
+		color: red;
+	}
+	h2 + p {
+		color: blue;
+		column-count: 2;
+	}
+}
+
+/* --------BODY-------- */
+
+body {
+	margin: 0;
+	font-size: 1em;
+	line-height: 140%;
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+body > header, main, section, aside, footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+h1 {
+	font: bold 1.4em;
+	background: rgb(255,204,0);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+	border-radius: 0 50% 50% 0 / 60% 60% 40% 40%;
+	padding: 0.5rem;
+	box-shadow: 0 3px 10px -5px black;
+	transition: 0.5s ease;
+
+}
+
+h1:hover {
+		transform: skew(25deg);
+		background: pink;
+}
+
+h2 {
+	background: white;
+	border-radius: 0 50% 50% 0 / 60% 60% 40% 40%;
+	padding: 0.5rem;
+	box-shadow: 0 3px 10px -5px black;
+}
+
+/* --------HEADER-------- */
+
+body > header {
+	padding: 1rem;
+	position: relative;
+	top: 20px;
+	background: #756;
+}
+
+body > header > nav {
+	order: -1;
+}
+
+img[src$=".png"] {
+	width: 80vw;
+}
+
+/* --------NAV-------- */
+
+nav ul {
+	list-style-type: none;
+}
+nav ul a {
+	text-decoration: none;
+}
+nav ul a:visited {
+	color: black;
+}
+nav ul a:hover {
+	color: yellow;
+}
+
+/* --------MAIN-------- */
+
+main {
+	background: rgb(236, 243, 235);
+	padding: 1rem;
+}
+
+section:first-child {
+	background-color: white;
+}
+/* --------SECTION-------- */
+
+body > section {
+	background: green;
+	padding: 1rem;
+}
+
+/* --------ASIDE-------- */
+
+body > aside {
+	background: red;
+	padding: 1rem;
+}
+
+/* --------FOOTER-------- */
+
+body > footer {
+	display: flex;
+	background: yellow;
+	padding: 1rem;
+}
+
+/* --------FORMULIER-------- */
+
+form {
+	float: left;
+	clear: both;
+	margin: 2rem;
+}
+fieldset {
+	box-shadow: 0 0 1em gray;
+	border: 0;
+	padding: 1em;
+	margin: 1em;
+}
+fieldset > * {
+	clear: both;
+	float: left;
+	border-radius: 1em;
+}
+legend {
+	font-size: 1.5em;
+	color: blue;
+}
+label {
+	margin: .5em;
+}
+input {
+	transition: 1s;
+	width: 100%;
+	padding: .5em;
+	box-sizing: border-box;
+}
+input:hover {
+	padding: 1em;
+	border: solid blue;
+}
+[for="email"]:after {
+	content: "*";
+	color: red;
